@@ -16,6 +16,7 @@
             <img src="https://www.overclockersclub.com/siteimages/news/news42480_1-f1_2019_gets_full_ingame_trailer_mini.png">
             <h1>Random track generator</h1>
         </header>
+        <div class="spacer"></div>
         <main>
             <div id="current_track">
                 <div id="track_text">
@@ -28,10 +29,15 @@
             </div>
         </main>
         <button id="generate" onclick='generate()'>Generate</button>
-        <label for="incshorts">Include short tracks</label>
-        <input id="incshorts" type="checkbox" onchange="selectchanged()">
-
-        <label for="usetimeout">Use timeout?</label>
-        <input id="usetimeout" checked type="checkbox" onchange="timeoutchange()">
+        <div id="settings">
+            <div>
+                <label for="incshorts">Include short tracks</label>
+                <input id="incshorts" type="checkbox" onchange="selectchanged()">
+            </div>
+            <div>
+                <label for="usetimeout">Use timeout?</label>
+                <input id="usetimeout" checked type="checkbox" onchange="timeoutchange()">
+            </div>
+        </div>
     </body>
 </html>

@@ -69,6 +69,7 @@ function rewriteText(){
     trackimg.setAttribute('src', selected.getAttribute('track_src'));
 }
 
+//generate random track
 function generate(){
     if(!generating){
 
@@ -78,12 +79,13 @@ function generate(){
             element.classList.remove('selected');
         }
 
-
+        //variables
         let rnum = Math.floor(Math.random()*tracks.length*3);
         generating = true; 
         let delay = 5;
         let timeout = 0;
 
+        //generating
         if (usetimeout){
             //selecting animation
             for (let i = 0; i < rnum; i++) {
@@ -114,11 +116,13 @@ function generate(){
     }
 }
 
+//include short tracks or not
 function selectchanged(){
     shorts = !shorts;
     setup();
 }
 
+//user selected to change instantly
 function timeoutchange(){
     usetimeout = !usetimeout;
 }
