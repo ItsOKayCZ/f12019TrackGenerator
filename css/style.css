@@ -1,0 +1,204 @@
+html, body{
+    height:100%;
+    width:100%;
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url('../fonts/formula1-regular-webfont.woff2') format('woff2'),
+         url('../fonts/formula1-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root{
+    --color1: #252525;
+    --color2: #ff0000;
+    --color3: #af0404;
+    --color4: #414141;
+}
+
+body{
+    background-color: var(--color4);
+    font-family: 'regular';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    position: absolute;
+    top:0;
+    top:0;
+    width:100%;
+    height: 100px;
+    background-color:#6b6b6b;
+
+    display: flex;
+    align-items: center;
+}
+
+div.spacer{
+    height:100px;
+}
+
+/* header */
+header > img{
+    height: 90px;
+}
+header > h1{
+    font-size: 40px;
+}
+
+/* viewport */
+main{
+    background-color:var(--color1);
+    width: 1000px;
+    height: 500px;
+    border-radius: 30px;
+    padding:20px;
+}
+#current_track{
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#track_map{
+    background-color:#313131;
+    width: 60%;
+}
+
+#track_text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    justify-content: center;    
+}
+#track_text > h1{
+    font-size:1.3rem;
+    margin:25px 10px;
+}
+
+/* list of tracks */
+#tracks{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.track_logo{
+    height:40px;
+    width:40px;
+    margin:10px;
+    border-radius: 50%;
+    border: solid 4px transparent;
+}
+
+/* generate button */
+#generate{
+    margin:20px 0px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    outline:none;
+    border:none;
+    background-color:var(--color2);
+    color:black;
+    font-family: 'regular';
+}
+#generate:hover{
+    border:solid 2px #af0404;
+}
+
+/* settings */
+.selected{
+    border: solid var(--color2) 4px;
+}
+#settings{
+    background-color: var(--color2);
+    height:50px;
+    width:400px;
+    border-radius:50px;
+    padding:20px;
+    border: solid 3px #af0404;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#settings > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+@media (max-width:1000px){
+    header{
+        height:40px;
+    }
+    div.spacer{
+        height:40px;
+    }
+    header > h1{
+        font-size: 20px;
+    }
+    header > img{
+        height: 90%;
+    }
+    main{
+        width:100%;
+        height: fit-content;
+    }
+    .track_logo{
+        height:30px;
+        width:30px;
+        margin:5px;
+    }
+    #current_track{
+        height:50%;
+    }
+}
+
+@media (max-width:450px){
+    main{
+        position: absolute;
+        top:40px;
+    }
+    #settings{
+        border-radius:0;
+        height:2%;
+        position:absolute;
+        bottom:0;
+    }
+    #generate{
+        position: absolute;
+        bottom:7%;
+    }
+}
+
+@media (max-height:700px){
+    main{
+        height: 60%;
+        position: absolute;
+        top:40px;
+    }
+    #settings{
+        border-radius:0;
+        height:2%;
+        position:absolute;
+        bottom:0;
+    }
+    #generate{
+        position: absolute;
+        bottom:7%;
+    }
+}
