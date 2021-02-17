@@ -152,5 +152,19 @@
             "logo_src":"https://www.f1gamesetup.com/img/flags/xs_usa.png",
             "track_src":"https://www.f1gamesetup.com/img/circuits/usa.png"
         }
+    ],
+    "2020":[
+        {
+            "name":"Vietnam GP",
+            "track_name":"Hanoi Street Circuit",
+            "logo_src":"https://www.f1gamesetup.com/img/flags/xs_vietnam.png",
+            "track_src":"https://www.f1gamesetup.com/img/circuits/vietnam.png"
+        },
+        {
+            "name":"Netherlands GP",
+            "track_name":"Zandvoort Circuit",
+            "logo_src":"https://www.f1gamesetup.com/img/flags/xs_netherlands.png",
+            "track_src":"https://www.f1gamesetup.com/img/circuits/netherlands.png"
+        }
     ]
 }
