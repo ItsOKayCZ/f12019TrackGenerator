@@ -5,10 +5,12 @@ var selected = undefined;
 var tracks = [];
 var generating = false;
 var usetimeout = true;
+var tracks2020 = true;
 
 function init(){
     shorts = document.getElementById('incshorts').checked;
     usetimeout = document.getElementById('usetimeout').checked;
+    tracks2020 = document.getElementById('2020tracks').checked;
 
     fetch('data/tracks.json')
     .then(response => response.json())
@@ -36,6 +38,12 @@ function draw_logos(){
 
     if(shorts){
         all_tracks['short_tracks'].forEach(element => {
+            createlogo(div, element);
+        });
+    }
+
+    if(tracks2020){
+        all_tracks['2020'].forEach(element => {
             createlogo(div, element);
         });
     }
@@ -125,4 +133,8 @@ function selectchanged(){
 //user selected to change instantly
 function timeoutchange(){
     usetimeout = !usetimeout;
+}
+
+function tracks2020change(){
+    tracks2020 = !tracks2020;
 }
